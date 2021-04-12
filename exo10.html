@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo10</title>
+</head>
+<body>
+    
+    <script>
+    // Jean va à la boulangerie de son quartier. Il achète 3 baguettes à 4 € l’une et un gâteau à 2,64 €. Il paie avec un billet de 20 €.
+    // combien d'argent reste a jean ? 
+    
+    var baguette = 4;
+    var gateau = 2.64;
+    var argent = 20;
+
+    var reste = argent - baguette*3 - gateau;
+    console.log("Il reste " + reste.toFixed(2) + "€ à Jean.");
+
+    // jean (encore lui) est le gerant d'une boite de nuit ,
+    // seul les moin de 18 ans peuvent entrer (oui c bisarre) 
+    // parcontre 2 adulte ont le droit d'entrer dans cette boite , c'est jean et son amis pierrot,
+    // parcontre elisa et julie n'ont pas le droit d'entrer peux importe leur ages.
+    
+    
+    var acces = prompt("Veuillez entrer votre age");
+    var invite = prompt("Veuillez rentre votre prenom");
+
+    if(acces<18){
+        console.log("Bienvenue, tu peux rentrer : " + acces);
+        if (invite === "jean"){
+            console.log("tu peux rentrer " + invite);
+        }
+        else if (invite === "pierrot"){
+            console.log("tu peux rentrer " + invite);
+        }
+        else if (invite === "elisa"){
+            console.log("T'es blacklist " + invite);
+        }
+        else if (invite === "julie"){
+            console.log("Oublie !T'es blacklist " + invite);
+        }
+    }
+    else{
+        console.log("Tu ne peux pas rentrer.") 
+    }
+    
+    // Déclarer une variable budget qui contient la somme de 1 553,89 €. Déclarer une variable achats qui contient la somme de 1 554,76 €. Afficher si le budget permet de payer les achats.
+
+    var budget = 1553.89;
+    var achats = 1554.76;
+    var manque = achats - budget;
+
+    if(budget > achats){
+        console.log("Le budget permet de payer les achats");
+    }
+    else{
+        console.log("Le budget ne permet pas de payer les achats, il vous manque : " + manque.toFixed(2) + " €");
+    }
+
+    //Déclarer une variable age qui contient la valeur de type integer de votre choix. Réaliser une condition pour afficher si la personne est mineure ou majeure.
+
+    var age = 25;
+
+    if(Number.isInteger(age)){
+        if(age<18){
+            console.log("Vous êtes mineur : " + age + " ans");
+        }
+        else{
+            console.log("Vous êtes majeur : " + age + " ans");
+        }
+    }
+    else{
+        console.log("Veuillez rentrer un âge.");
+    }
+
+    </script>
+</body>
+</html>
