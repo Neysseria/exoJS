@@ -28,23 +28,27 @@
     var acces = prompt("Veuillez entrer votre age");
     var invite = prompt("Veuillez rentre votre prenom");
 
-    if(acces<18){
+    if(acces>0 && acces<18){
+        if (invite === "elisa"){
+            console.log("T'es blacklist " + invite);
+        }
+        else if (invite === "julie"){
+            console.log("Oublie !T'es blacklist " + invite);
+        }
+        else{
         console.log("Bienvenue, tu peux rentrer : " + acces);
+        }
+    }
+    else{
         if (invite === "jean"){
             console.log("tu peux rentrer " + invite);
         }
         else if (invite === "pierrot"){
             console.log("tu peux rentrer " + invite);
         }
-        else if (invite === "elisa"){
-            console.log("T'es blacklist " + invite);
+        else{
+            console.log("Tu ne peux pas rentrer.");
         }
-        else if (invite === "julie"){
-            console.log("Oublie !T'es blacklist " + invite);
-        }
-    }
-    else{
-        console.log("Tu ne peux pas rentrer.") 
     }
     
     // Déclarer une variable budget qui contient la somme de 1 553,89 €. Déclarer une variable achats qui contient la somme de 1 554,76 €. Afficher si le budget permet de payer les achats.
@@ -62,14 +66,19 @@
 
     //Déclarer une variable age qui contient la valeur de type integer de votre choix. Réaliser une condition pour afficher si la personne est mineure ou majeure.
 
-    var age = 25;
+    var age = -3;
 
     if(Number.isInteger(age)){
-        if(age<18){
-            console.log("Vous êtes mineur : " + age + " ans");
+        if(age>0 && age<18){
+            if(age>3 && age<18){
+                console.log("Vous êtes mineur : " + age + " ans");
+            }
+            else{
+                console.log("Vous etes majeur");
+            }
         }
         else{
-            console.log("Vous êtes majeur : " + age + " ans");
+            console.log("L'age n'existe pas");
         }
     }
     else{
