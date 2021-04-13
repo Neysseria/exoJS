@@ -7,6 +7,7 @@
     <title>Exo11</title>
 </head>
 <body>
+    <h1 id="heading">Hello world</h1>
     <script>
         // En utilisant la boucle while, afficher tous les codes postaux possibles pour le département 13.
         // genre de 13000 à 13999
@@ -25,6 +26,13 @@
             var multiplication = i*mult;
             console.log("multiplication = " +i + " x "+ mult + " = " + multiplication);
         }
+        // Modifier titre en JS
+
+        var titre = document.querySelector("#heading");
+        titre.style.color = "purple";
+        titre.style.backgroundColor = "grey";
+        titre.style.textAlign = "center";
+        
     </script>
 </body>
 </html>
