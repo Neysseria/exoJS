@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo13</title>
+    <style>
+        .title{
+            /* animation: 1s couleur linear infinite; */
+            cursor: pointer;
+        }
+
+        @keyframes couleur { 
+            0%{
+                color:red;
+            }
+            25%{
+                color:aquamarine;
+            }
+            50%{
+                color:coral;
+            }
+            75%{
+                color: cornflowerblue;
+            }
+            100%{
+                color:forestgreen;
+            }
+        }
+
+        .modal{
+            display: none;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            width: 250px;
+            padding: 2%;
+            background: cornflowerblue;
+            border-radius: 20px;
+            box-shadow: 2px 2px 2px black;
+            color: white;
+        }
+
+        /* Barre de chargement */
+    
+        .titre{
+            cursor: pointer;
+        }
+
+        .barre { 
+            margin-top: 2%;
+            height: 20px;
+            width: 400px;
+            border: 6px outset rgb(90, 90, 90);
+            border-radius: 50px;
+            position: relative;
+            display: none;
+            background: #f3efe6;
+            overflow: hidden;
+        }
+
+        .barre span {
+            display: block;
+            height: 100%;
+        }
+        span{
+            width: 100%;
+        }
+
+        .progress {
+            border-radius: 50px;
+            background-color: #379b9e;
+            animation: progressBar 2s linear;
+            animation-fill-mode: forwards; 
+        }
+
+        @keyframes progressBar {
+            0%{ 
+                width: 0%; 
+                background-color: #61f8fd;
+            }
+            100%{
+                width: 100%; 
+                background-color: #379b9e;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="title">Le DOM</h1>
+
+    <div class="modal" id="modal">
+        <h3>Bonjour les amis et bienvenue</h3>
+        <button>Ok</button>
+    </div>
+
+    <button class="bouton">Loading Bar</button>
+    <div class="barre" id="barre">
+        <span><span class="progress"></span></span>
+    </div>
+
+    <script src="exo13.js"></script>
+</body>
+</html>

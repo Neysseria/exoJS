@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .titre{
+            cursor: pointer;
+        }
+
+        .progress2 {
+            display: none ;
+            padding: 6px;
+            width: 400px;
+            border-radius: 30px;
+            background: rgba(97, 96, 96, 0.739);  
+        }
+
+        .progress-moved .progress-bar2 {
+            width: 100%;  
+            background-color: #379b9e;
+            animation: progressAnimation 6s;
+        }
+
+        .progress-bar2 {
+            height: 18px;
+            border-radius: 30px;
+            transition: 0.4s linear;  
+        }
+
+        @keyframes progressAnimation {
+            0%{ 
+                width: 5%; 
+                background-color: #61f8fd;
+            }
+            100%{ 
+                width: 100%; 
+                background-color: #379b9e;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="titre">Cliquez ici</h1>
+    <div class="progress2 progress-moved" id="progressbar">
+        <div class="progress-bar2" ></div>
+    </div>
+
+    <script>
+        var titre = document.querySelector(".titre");
+        var progressbar = document.querySelector("#progressbar");
+
+        titre.addEventListener("click", function(){
+            progressbar.style.display = "flex";
+        })
+    </script>
+</body>
+</html>
